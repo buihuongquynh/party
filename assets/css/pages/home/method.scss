@@ -39,6 +39,7 @@
         transition: 0.3s;
     }
     img:hover {
+        cursor: pointer;
         transform: scale(1.05);
     }
     &__chil {

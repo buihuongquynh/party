@@ -1,10 +1,16 @@
 .header {
-    padding: 48px 107px 31px 97px;
+    padding: 49px 0px;
     background-color: #262626;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    .header__logo {
+        img {
+            padding-right: 70px;
+        }
+    }
     .humbeger {
         border: 1px solid $vang;
         padding: 7px;
@@ -18,6 +24,7 @@
     }
     .header__list {
         ul {
+            border: 3px solid $vang;
             .chil {
                 z-index: 1;
                 position: relative;
@@ -36,14 +43,17 @@
             .chil:hover {
                 a {
                     color: black;
+                    cursor: pointer;
                 }
             }
             .chil:hover:after {
                 top: 0;
                 height: 100%;
+                cursor: pointer;
             }
             .chil:active {
                 top: 2px;
+                cursor: pointer;
             }
             .chil1 {
                 z-index: 1;
@@ -53,6 +63,7 @@
                 position: absolute;
                 content: "";
                 width: 100%;
+                cursor: pointer;
                 height: 0;
                 bottom: 0;
                 left: 0;
@@ -63,14 +74,17 @@
             .chil1:hover {
                 a {
                     color: black;
+                    cursor: pointer;
                 }
             }
             .chil1:hover:after {
                 top: 0;
                 height: 100%;
+                cursor: pointer;
             }
             .chil1:active {
                 top: 2px;
+                cursor: pointer;
             }
             .chil2 {
                 z-index: 1;
@@ -78,6 +92,7 @@
             }
             .chil2:after {
                 position: absolute;
+                cursor: pointer;
                 content: "";
                 width: 100%;
                 height: 0;
@@ -90,6 +105,7 @@
             .chil2:hover {
                 a {
                     color: black;
+                    cursor: pointer;
                 }
             }
             .chil2:hover:after {
@@ -99,25 +115,6 @@
             .chil2:active {
                 top: 2px;
             }
-            // .chil:hover {
-            //     background: $vang;
-            //     a {
-            //         color: black;
-            //     }
-            // }
-            // .chil1:hover {
-            //     background: $vang;
-            //     a {
-            //         color: black;
-            //     }
-            // }
-            // .chil2:hover {
-            //     background: $vang;
-            //     a {
-            //         color: black;
-            //     }
-            // }
-            border: 3px solid $vang;
             display: flex;
             a {
                 font-size: 33.33px;
@@ -134,5 +131,3 @@
         }
     }
 }
-
-.show__header {}

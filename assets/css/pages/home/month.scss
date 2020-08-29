@@ -37,6 +37,10 @@
 .month {
     padding-bottom: 167px;
     &__chil {
+        .month__p {
+            flex-wrap: nowrap;
+            padding-left: 60px;
+        }
         height: 82rem;
         padding-top: 79px;
         .month__text {
@@ -62,7 +66,6 @@
                 }
             }
             .month__box {
-                width: 46%;
                 text-align: center;
                 border: 5px solid #e1b838;
                 h1 {

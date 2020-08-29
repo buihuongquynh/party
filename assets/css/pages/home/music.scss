@@ -52,6 +52,7 @@
                     @include hardwareAccel();
                     @include improveAntiAlias();
                     &:hover {
+                        cursor: pointer;
                         animation-name: wobble-bottom;
                         animation-duration: 1s;
                         animation-timing-function: ease-in-out;

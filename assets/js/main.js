@@ -3,9 +3,9 @@
      margin: 10,
      nav: false,
      animateOut: 'animate__rotateOut',
-     autoplay: true,
-     autoplayTimeout: 5000,
-     autoplayHoverPause: true,
+     //  autoplay: true,
+     //  autoplayTimeout: 5000,
+     //  autoplayHoverPause: true,
 
      responsive: {
          0: {

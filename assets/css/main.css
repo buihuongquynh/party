@@ -911,12 +911,15 @@ button {
    example : @include center(both) || @include center(horizontal) || @include center(vertical)
    */
 .header {
-  padding: 48px 107px 31px 97px;
+  padding: 49px 0px;
   background-color: #262626;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%; }
+  justify-content: center;
+  margin-right: 15px;
+  margin-left: 15px; }
+  .header .header__logo img {
+    padding-right: 70px; }
   .header .humbeger {
     border: 1px solid #e1b838;
     padding: 7px;
@@ -943,12 +946,15 @@ button {
       background: #e1b838;
       transition: all 0.3s ease; }
     .header .header__list ul .chil:hover a {
-      color: black; }
+      color: black;
+      cursor: pointer; }
     .header .header__list ul .chil:hover:after {
       top: 0;
-      height: 100%; }
+      height: 100%;
+      cursor: pointer; }
     .header .header__list ul .chil:active {
-      top: 2px; }
+      top: 2px;
+      cursor: pointer; }
     .header .header__list ul .chil1 {
       z-index: 1;
       position: relative; }
@@ -956,6 +962,7 @@ button {
       position: absolute;
       content: "";
       width: 100%;
+      cursor: pointer;
       height: 0;
       bottom: 0;
       left: 0;
@@ -963,17 +970,21 @@ button {
       background: #e1b838;
       transition: all 0.3s ease; }
     .header .header__list ul .chil1:hover a {
-      color: black; }
+      color: black;
+      cursor: pointer; }
     .header .header__list ul .chil1:hover:after {
       top: 0;
-      height: 100%; }
+      height: 100%;
+      cursor: pointer; }
     .header .header__list ul .chil1:active {
-      top: 2px; }
+      top: 2px;
+      cursor: pointer; }
     .header .header__list ul .chil2 {
       z-index: 1;
       position: relative; }
     .header .header__list ul .chil2:after {
       position: absolute;
+      cursor: pointer;
       content: "";
       width: 100%;
       height: 0;
@@ -983,7 +994,8 @@ button {
       background: #e1b838;
       transition: all 0.3s ease; }
     .header .header__list ul .chil2:hover a {
-      color: black; }
+      color: black;
+      cursor: pointer; }
     .header .header__list ul .chil2:hover:after {
       top: 0;
       height: 100%; }
@@ -1021,9 +1033,8 @@ button {
         align-items: center;
         justify-content: space-between; }
         .banner .banner__chil .item .raw .item__chil .opening {
-          transform: translate(68px, 71px);
-          width: 50rem;
-          height: 17rem;
+          transform: translateY(71px);
+          width: 100%;
           border: 10px solid #e1b838; }
           .banner .banner__chil .item .raw .item__chil .opening h1 {
             padding-bottom: 13px;
@@ -1052,7 +1063,7 @@ button {
   100% {
     transform: skew(0); } }
 .menu {
-  padding: 62px 0px 59px 0; }
+  padding: 62px 0px 59px 0px; }
   .menu__chil {
     padding: 26px 0 0 0; }
     .menu__chil p {
@@ -1182,6 +1193,9 @@ button {
   .month__chil {
     height: 82rem;
     padding-top: 79px; }
+    .month__chil .month__p {
+      flex-wrap: nowrap;
+      padding-left: 60px; }
     .month__chil .month__text {
       padding-right: 150px;
       padding-left: 104px;
@@ -1202,7 +1216,6 @@ button {
           animation-timing-function: ease-in-out;
           animation-iteration-count: 1; }
       .month__chil .month__text .month__box {
-        width: 46%;
         text-align: center;
         border: 5px solid #e1b838; }
         .month__chil .month__text .month__box h1 {
@@ -1251,6 +1264,7 @@ button {
 .method img {
   transition: 0.3s; }
 .method img:hover {
+  cursor: pointer;
   transform: scale(1.05); }
 .method__chil {
   padding-top: 124px; }
@@ -1315,6 +1329,7 @@ button {
           transform: translateZ(0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
           .music__chil .music__box .box__wrap .box__chil:hover {
+            cursor: pointer;
             animation-name: wobble-bottom;
             animation-duration: 1s;
             animation-timing-function: ease-in-out;
@@ -1370,8 +1385,7 @@ button {
         font-size: 45.99px;
         color: #e1b838; }
     .footer .footer__chil .row__center {
-      padding-top: 64px;
-      padding-left: 139px; }
+      padding-top: 64px; }
     .footer .footer__chil .row .can {
       padding: 0 99px; }
     .footer .footer__chil .row .open {
@@ -1386,10 +1400,8 @@ button {
         animation-timing-function: ease-in-out;
         animation-iteration-count: 1; }
     .footer .footer__chil .row .open {
-      text-align: center;
-      width: 100%; }
+      text-align: center; }
       .footer .footer__chil .row .open .open__cent {
-        width: 96%;
         border: 5px solid #e1b838; }
         .footer .footer__chil .row .open .open__cent h1 {
           background: #e1b838;
@@ -1456,10 +1468,8 @@ button {
   .wrapper {
     max-width: 100%; }
 
-  .header__logo img {
-    width: 85%; }
-
   .header {
+    width: 100%;
     padding: 13px 90px; }
 
   .header .header__list ul .chil {
@@ -1492,26 +1502,23 @@ button {
     align-items: center;
     justify-content: center; }
 
-  .banner {
-    height: 41.5rem; }
-
   .banner .banner__chil .item .raw .item__chil .opening {
     transform: translate(0);
-    width: 47rem;
-    height: 17rem;
-    border: 9px solid #e1b838; }
+    border: 9px solid #e1b838;
+    transform: translate(0); }
 
   .banner .banner__chil .item .raw .item__chil .opening h1 {
     padding-bottom: 6px;
-    font-size: 32.74px; }
+    font-size: 22.74px; }
 
   .banner .banner__chil .item .raw .item__chil .opening p {
     margin-top: 26px;
-    font-size: 34.21px; }
+    font-size: 22.21px;
+    padding: 10px 0; }
 
   .banner .banner__chil .item .raw .item__chil #open {
     margin-top: 27px;
-    font-size: 29.57px; }
+    font-size: 15.57px; }
 
   .menu__chil .menu__images img {
     width: 75%; }
@@ -1535,14 +1542,15 @@ button {
     font-size: 19.61px; }
 
   .dinner__chil {
-    padding-left: 20px; }
+    padding: 0 33px; }
 
   .dinner .dinner__center img {
     transition: 0.3s;
     width: 100%; }
 
   .dinner .dinner__center .text__cen {
-    padding: 74px 0; }
+    padding: 74px 0;
+    padding-right: 40px; }
 
   .dinner .dinner__center h2 {
     letter-spacing: 3px;
@@ -1551,6 +1559,9 @@ button {
   .dinner .dinner__center p {
     font-size: 42.02px;
     padding: 10px 0; }
+
+  .dinner .dinner__center {
+    align-items: center; }
 
   .dinner .dinner__center .text__cen img {
     margin-top: 65px; }
@@ -1598,7 +1609,8 @@ button {
     margin-left: 50px; }
 
   .method__chil {
-    padding-top: 50px; }
+    padding-top: 50px;
+    padding-bottom: 32px; }
 
   .method__chil .thod__cen .methob__box {
     transform: translateX(0px);
@@ -1624,7 +1636,9 @@ button {
   .music__chil .music__box {
     padding-left: 60px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
 
   .music__chil .music__box .box__wrap .box__chil {
     margin-right: 50px;
@@ -1677,7 +1691,7 @@ button {
     font-size: 31.49px; }
 
   .footer .footer__chil .row .open .open__cent .oppen {
-    padding: 16px 0; }
+    padding: 24px 29px; }
 
   .footer .footer__chil .row .open .open__cent .oppen p {
     font-size: 22.05px; }
@@ -1701,7 +1715,34 @@ button {
 
   .footer {
     margin-bottom: 0; } }
+@media (min-width: 768px) {
+  .dinner .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%; } }
+@media (min-width: 769px) {
+  .dinner .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%; } }
 @media (max-width: 768px) {
+  .header .header__logo img {
+    display: none; }
+
+  .month__chil .month__p {
+    padding-left: 0px; }
+
+  .method .col-12 {
+    display: flex;
+    justify-content: center; }
+
+  .method img {
+    width: 50%; }
+
+  .dinner .dinner__center .text__cen {
+    padding-right: 0px; }
+
+  .header {
+    margin-left: 0; }
+
   .wrapper .header .humbeger {
     display: block; }
 
@@ -1731,38 +1772,38 @@ button {
   .banner .owl-theme .owl-nav.disabled + .owl-dots {
     margin-top: 80px; }
 
-  .dinner .dinner__center {
+  .dinner .dinner__center .img__div {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    text-align: end; }
+    justify-content: center; }
+
+  .dinner__chil .hic {
+    padding-left: 0;
+    display: flex;
+    justify-content: center; }
+
+  .dinner .dinner__center img {
+    width: 75%; }
 
   .dinner .dinner__center .text__cen {
-    padding: 0; }
-
-  .dinner .dinner__center p {
-    font-size: 29.02px; }
-
-  .dinner .dinner__center h2 {
-    font-size: 28.02px; }
-
-  .dinner .dinner__center .text__cen .a a {
-    font-size: 19.94px; }
-
-  .dinner .dinner__center .text__cen img {
-    margin-top: 17px; }
+    align-items: center; }
 
   .dinner .dinner__center h1 {
-    margin-top: 17px;
-    font-size: 28.26px; }
+    margin-top: 30px; }
 
   .month {
     padding-bottom: 35px; }
 
   .month__chil .month__text .month__box {
-    width: 36%; }
+    margin-bottom: 40px; }
 
   .month__chil .month__text {
-    padding: 0 32px; }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 46px;
+    flex-wrap: wrap; }
 
   .month__chil .month__text .month__box h1 {
     font-size: 20.75px; }
@@ -1837,9 +1878,6 @@ button {
   .header {
     background: rgba(0, 0, 0, 0.5); }
 
-  .header .header__logo {
-    width: 17%; }
-
   .header .header__list ul .chil1 {
     padding: 10px 20px 10px 22px;
     border-bottom: 1px solid #e1b838; }
@@ -1857,7 +1895,10 @@ button {
     transition: 0.5s; }
 
   .show__header {
-    transform: translateY(0); } }
+    transform: translateY(0); }
+
+  .footer .footer__chil .row .open__text .p1 {
+    padding: 24px 36px; } }
 @media (max-width: 425px) {
   .header .humbeger .line {
     width: 31px;
@@ -1909,7 +1950,10 @@ button {
     font-size: 14.61px; }
 
   .dinner .dinner__center .img__div {
-    width: 66%; }
+    width: 100%; }
+
+  .dinner .dinner__center img {
+    width: 100%; }
 
   .dinner__chil .hic {
     padding-left: 0; }
@@ -1931,7 +1975,6 @@ button {
     font-size: 21.02px; }
 
   .month__chil .month__text .month__box {
-    width: 63%;
     margin-right: 0; }
 
   .month__chil .month__text .month__box h1 {
@@ -1966,7 +2009,8 @@ button {
     display: block; }
 
   .music__chil .music__box .box__wrap .box__chil {
-    margin-left: 103px; }
+    margin-left: 0px;
+    margin-right: 0; }
 
   .music__chil .music__box .box__wrap .box__chil .jazz {
     padding: 25px 10px; }
@@ -2021,7 +2065,13 @@ button {
     transform: translate(35px, 60px); }
 
   .music__chil .music__box .box__wrap .box__chil h1 {
-    padding: 0 31px; } }
+    padding: 0 31px; }
+
+  .dinner .dinner__center .text__cen {
+    padding: 0; }
+
+  .music__chil .music__box .box__wrap {
+    justify-content: center; } }
 @media (max-width: 320px) {
   .banner .banner__chil .item .raw .item__chil .opening {
     width: 15rem;
@@ -2049,7 +2099,6 @@ button {
     margin-top: 4px; }
 
   .month__chil .month__text .month__box {
-    width: 66%;
     margin-right: 0; }
 
   .footer .bottom .bottom__right img {
