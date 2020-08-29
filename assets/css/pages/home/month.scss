@@ -1,0 +1,112 @@
+@mixin hideTapHighlightColor() {
+    //Prevent highlight colour when element is tapped
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+    //Improve performance on mobile/tablet devices
+    transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+    //Improve aliasing on mobile/tablet devices
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@keyframes wobble-bottom {
+    16.65% {
+        transform: skew(-12deg);
+    }
+    33.3% {
+        transform: skew(10deg);
+    }
+    49.95% {
+        transform: skew(-6deg);
+    }
+    66.6% {
+        transform: skew(4deg);
+    }
+    83.25% {
+        transform: skew(-2deg);
+    }
+    100% {
+        transform: skew(0);
+    }
+}
+
+.month {
+    padding-bottom: 167px;
+    &__chil {
+        height: 82rem;
+        padding-top: 79px;
+        .month__text {
+            padding-right: 150px;
+            padding-left: 104px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                font-size: 29.11px;
+            }
+            .month__box {
+                display: inline-block;
+                transform-origin: 100% 0;
+                @include hideTapHighlightColor();
+                @include hardwareAccel();
+                @include improveAntiAlias();
+                &:hover {
+                    animation-name: wobble-bottom;
+                    animation-duration: 1s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: 1;
+                }
+            }
+            .month__box {
+                width: 46%;
+                text-align: center;
+                border: 5px solid #e1b838;
+                h1 {
+                    padding: 6px 41px;
+                    background: #e1b838;
+                    font-size: 40.75px;
+                    font-weight: 900;
+                }
+                p {
+                    padding: 36px 0;
+                    font-size: 40.75px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .month__img {
+            display: flex;
+            .bit {
+                img {
+                    transition: 0.3s;
+                }
+                img:hover {
+                    transform: scale(1.05);
+                }
+                transform: translate(85px, 60px);
+            }
+            .bitt {
+                img {
+                    transition: 0.3s;
+                }
+                img:hover {
+                    transform: scale(1.05);
+                }
+                transform: translate(79px, 212px);
+            }
+            .bitn {
+                img {
+                    transition: 0.3s;
+                }
+                img:hover {
+                    transform: scale(1.05);
+                }
+                transform: translate(-133px, -15px);
+            }
+        }
+    }
+}

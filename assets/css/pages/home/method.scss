@@ -1,0 +1,83 @@
+@mixin hideTapHighlightColor() {
+    //Prevent highlight colour when element is tapped
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+    //Improve performance on mobile/tablet devices
+    transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+    //Improve aliasing on mobile/tablet devices
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@keyframes wobble-bottom {
+    16.65% {
+        transform: skew(-12deg);
+    }
+    33.3% {
+        transform: skew(10deg);
+    }
+    49.95% {
+        transform: skew(-6deg);
+    }
+    66.6% {
+        transform: skew(4deg);
+    }
+    83.25% {
+        transform: skew(-2deg);
+    }
+    100% {
+        transform: skew(0);
+    }
+}
+
+.method {
+    img {
+        transition: 0.3s;
+    }
+    img:hover {
+        transform: scale(1.05);
+    }
+    &__chil {
+        padding-top: 124px;
+        .thod__cen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .methob__box {
+                display: inline-block;
+                transform-origin: 100% 0;
+                @include hideTapHighlightColor();
+                @include hardwareAccel();
+                @include improveAntiAlias();
+                &:hover {
+                    animation-name: wobble-bottom;
+                    animation-duration: 1s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: 1;
+                }
+            }
+            .methob__box {
+                transform: translateX(-17px);
+                margin: 178px 0 0 10px;
+                border: 6px solid #e1b838;
+                h1 {
+                    padding: 0 42px;
+                    background: #e1b838;
+                    font-size: 58.33px;
+                    font-weight: 900;
+                }
+                .box__p {
+                    padding: 12px 0px;
+                    p {
+                        font-size: 37.5px;
+                        padding: 0 50px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@mixin hardwareAccel() {
+    //Improve performance on mobile/tablet devices
+    transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+    //Improve aliasing on mobile/tablet devices
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@keyframes wobble-bottom {
+    16.65% {
+        transform: skew(-12deg);
+    }
+    33.3% {
+        transform: skew(10deg);
+    }
+    49.95% {
+        transform: skew(-6deg);
+    }
+    66.6% {
+        transform: skew(4deg);
+    }
+    83.25% {
+        transform: skew(-2deg);
+    }
+    100% {
+        transform: skew(0);
+    }
+}
+
+.footer {
+    margin-top: 126px;
+    margin-bottom: 31px;
+    display: flex;
+    .footer__chil {
+        width: 100%;
+        .img {
+            text-align: center;
+            p {
+                margin-top: 19px;
+                font-size: 45.99px;
+                color: $vang;
+            }
+        }
+        .row__center {
+            padding-top: 64px;
+            padding-left: 139px;
+        }
+        .row {
+            .can {
+                padding: 0 99px;
+            }
+            .open {
+                display: inline-block;
+                transform-origin: 100% 0;
+                @include hideTapHighlightColor();
+                @include hardwareAccel();
+                @include improveAntiAlias();
+                &:hover {
+                    animation-name: wobble-bottom;
+                    animation-duration: 1s;
+                    animation-timing-function: ease-in-out;
+                    animation-iteration-count: 1;
+                }
+            }
+            .open {
+                text-align: center;
+                width: 100%;
+                .open__cent {
+                    width: 96%;
+                    border: 5px solid $vang;
+                    h1 {
+                        background: $vang;
+                        font-size: 36.49px;
+                        font-weight: 900;
+                    }
+                    .oppen {
+                        padding: 16px 0;
+                        p {
+                            white-space: nowrap;
+                            font-weight: 600;
+                            font-size: 30.05px;
+                        }
+                    }
+                }
+            }
+            .open__text {
+                transform: translateX(-104px);
+                display: flex;
+                align-items: center;
+                .p1 {
+                    padding: 0 10px;
+                    p {
+                        margin-bottom: 18px;
+                        font-size: 33.33px;
+                    }
+                }
+                .p2 {
+                    transform: translateX(65px);
+                }
+            }
+        }
+    }
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .bottom__left {
+            p {
+                font-size: 42.46px;
+                padding: 38px 81px;
+            }
+        }
+        .bottom__right {
+            padding-right: 78px;
+            display: flex;
+            align-items: center;
+            img {
+                padding-right: 20px;
+            }
+            a {
+                font-size: 34.4px;
+            }
+        }
+    }
+}

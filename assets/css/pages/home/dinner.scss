@@ -1,0 +1,64 @@
+.dinner {
+    margin-bottom: 63px;
+    color: $vang;
+    &__chil {
+        padding-left: 105px;
+        .hic {
+            padding-left: 77px;
+            padding-top: 4px;
+        }
+    }
+    .dinner__center {
+        display: flex;
+        text-align: end;
+        .img__div {
+            width: 100%;
+        }
+        img {
+            margin-bottom: -21px;
+            transition: 0.3s;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        p {
+            color: $vang;
+            font-size: 54.02px;
+            font-weight: 100;
+        }
+        h2 {
+            letter-spacing: 3px;
+            font-size: 54.02px;
+            font-weight: 600;
+            font-family: 'Fjalla One', sans-serif;
+        }
+        h1 {
+            color: $vang;
+            margin-top: 17px;
+            font-size: 36.26px;
+            font-family: 'Fjalla One', sans-serif;
+        }
+        .text__cen {
+            padding: 74px 0;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            .a {
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $vang;
+                a {
+                    font-size: 26.94px;
+                    color: black;
+                    padding: 5px;
+                }
+            }
+            img {
+                margin-top: 128px;
+                width: 34%;
+            }
+        }
+    }
+}

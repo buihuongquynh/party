@@ -1,0 +1,97 @@
+.banner {
+    height: 59rem;
+    // .owl-theme .owl-dots .owl-dot span:active {
+    //     border: none;
+    // }
+    // .owl-theme .owl-dots .owl-dot:active {
+    //     border: none;
+    // }
+    // .owl-theme .owl-dots .owl-dot:active span {
+    //     border: none;
+    // }
+    // .owl-theme .owl-dots .owl-dot span {
+    //     width: 25px;
+    //     height: 25px;
+    //     border: 3px solid $vang;
+    //     margin: 0px 9px;
+    //     background: none;
+    //     display: block;
+    //     border-radius: 30px;
+    // }
+    // .owl-theme .owl-dots,
+    // .owl-theme .owl-nav {
+    //     text-align: center;
+    //     width: 100%;
+    //     margin-top: 0;
+    // }
+    // .owl-theme .owl-dots,
+    // .owl-theme .owl-nav .owl-prev,
+    // .owl-next {
+    //     transform: translateY(-116px);
+    // }
+    // .owl-theme .owl-dots,
+    // .owl-theme .owl-nav .owl-prev span {
+    //     font-size: 80px;
+    //     color: $vang;
+    // }
+    // .owl-theme .owl-dots,
+    // .owl-theme .owl-nav .owl-next span {
+    //     color: $vang;
+    //     font-size: 80px;
+    //     transform: translate(2px, -234px);
+    // }
+    // .owl-theme .owl-nav [class*=owl-] {
+    //     margin: 5px 70px;
+    // }
+    .owl-theme .owl-dots .owl-dot {
+        zoom: 2.4;
+    }
+    .owl-theme .owl-dots,
+    .owl-theme .owl-nav {
+        transform: translateY(-88px);
+        -webkit-tap-highlight-color: transparent;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        background: none;
+        border: 1px solid $vang;
+        margin: 5px;
+    }
+    .owl-theme .owl-dots .owl-dot span:active {
+        background: $vang;
+    }
+    .banner__chil {
+        text-align: center;
+        .item {
+            width: 100%;
+            .raw {
+                .item__chil {
+                    img {}
+                    .opening {
+                        transform: translate(68px, 71px);
+                        width: 50rem;
+                        height: 17rem;
+                        border: 10px solid $vang;
+                        h1 {
+                            padding-bottom: 13px;
+                            font-size: 44.74px;
+                            font-weight: 800;
+                            background-color: $vang;
+                        }
+                        p {
+                            margin-top: 15px;
+                            font-size: 41.21px;
+                        }
+                    }
+                    #open {
+                        margin-top: 122px;
+                        font-size: 42.57px;
+                        font-weight: 100;
+                    }
+                }
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+}

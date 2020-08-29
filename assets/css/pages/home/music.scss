@@ -1,0 +1,96 @@
+@mixin hideTapHighlightColor() {
+    //Prevent highlight colour when element is tapped
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+    //Improve performance on mobile/tablet devices
+    transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+    //Improve aliasing on mobile/tablet devices
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@keyframes wobble-bottom {
+    16.65% {
+        transform: skew(-12deg);
+    }
+    33.3% {
+        transform: skew(10deg);
+    }
+    49.95% {
+        transform: skew(-6deg);
+    }
+    66.6% {
+        transform: skew(4deg);
+    }
+    83.25% {
+        transform: skew(-2deg);
+    }
+    100% {
+        transform: skew(0);
+    }
+}
+
+.music {
+    padding-top: 59px;
+    &__chil {
+        padding-top: 89px;
+        .music__box {
+            padding-left: 164px;
+            display: flex;
+            align-items: center;
+            .box__wrap {
+                display: flex;
+                align-items: center;
+                .box__chil {
+                    display: inline-block;
+                    transform-origin: 100% 0;
+                    @include hideTapHighlightColor();
+                    @include hardwareAccel();
+                    @include improveAntiAlias();
+                    &:hover {
+                        animation-name: wobble-bottom;
+                        animation-duration: 1s;
+                        animation-timing-function: ease-in-out;
+                        animation-iteration-count: 1;
+                    }
+                }
+                .box__chil {
+                    margin-right: 50px;
+                    text-align: center;
+                    border: 8px solid #e1b838;
+                    h1 {
+                        padding: 11px 0px;
+                        background: #e1b838;
+                        font-weight: 900;
+                        font-size: 54.75px;
+                    }
+                    .jazz {
+                        padding: 25px 73px;
+                        h2 {
+                            font-size: 58.3px;
+                            font-weight: 600;
+                            color: white;
+                        }
+                        p {
+                            font-size: 58.3px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .music__text {
+                margin-top: 90px;
+                p {
+                    font-size: 41.67px;
+                }
+            }
+        }
+        .list__img {
+            margin-top: 15px;
+        }
+    }
+}
